@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <title>Algebraic Expressions - Addition and Multiplication (Birds)</title>
+    <title>Arithmetic Expressions - Addition and Multiplication (Birds)</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.1.3-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/css/fonts/font.css" />
@@ -30,8 +30,8 @@
             </div>
             <div class="container position-relative">
                 <h1>
-                    <span class="title titledesktop">Algebraic Expressions</span>
-                    <span class="title titlemobile">Algebraic Expressions</span>
+                    <span class="title titledesktop">Arithmetic Expressions</span>
+                    <span class="title titlemobile">Arithmetic Expressions</span>
                     <span class="sub-title">Addition and Multiplication (Birds)</span>
                 </h1>
             </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="rightpan">
                         <h1>
-                            <span class="title">Algebraic Expressions -</span>
+                            <span class="title">Arithmetic Expressions -</span>
                             <span class="sub-title">Addition and Multiplication (Birds)</span>
                         </h1>
                     </div>
@@ -95,7 +95,7 @@
               <div id="split-1">
                 <div class="instruction_cont">
                   <div class="title_txt">
-                    Evaluate the Algebraic expressions given below.
+                    Evaluate the Arithmetic expressions given below.
                   </div>
                   <div class="instruction_txt">
                     Read the instructions for more details.
@@ -131,14 +131,16 @@
                     <div class="ques_cont">
                       <div class="wrong_mc">&#10006;</div>
                       <div class="correct_mc">&#10004;</div>
-                      <div class="ques_content">
-                        <div class="qNo_txt">Q1: What is the value of:</div>                      
-                        <div class="qtn_txt bold">QUESTION</div>
-                      </div>
-                      <div class="ans_content">
-                        <label htmlFor="numbInput_txt" class="numbInput_label bold">=</label>
-                        <input id="numbInput_txt" type="number" placeholder="0" class="bold"/>
-                      </div>
+                      <div class="row" style="margin: 0px;">
+                        <div class="ques_content col-8">
+                          <div class="qNo_txt">Q1: What is the value of:</div>                      
+                          <div class="qtn_txt bold">QUESTION</div>
+                        </div>
+                        <div class="ans_content col-4">
+                          <label htmlFor="numbInput_txt" class="numbInput_label bold">=</label>
+                          <input id="numbInput_txt" type="number" placeholder="0" class="bold"/>
+                        </div>
+                    </div>
                     </div>                  
                     <div class="correctAnswer_txt bold">0/0</div>
                   </div>
@@ -171,10 +173,9 @@
                 <div class="procBox container">
                   <span class="procstepno bold">1.</span>
                   <p>
-                    This exploriment deals with addition and multiplication of variables. We have
-                    a set of five different birds, each represented by an
-                    algebraic variable (like 'a', 'b', etc). We are also given
-                    how many birds of each type are there (value of variable).
+                    This exploriment deals with evaluation of expressions with addition and simple multiplication. We have
+                    a set of five different birds. We are also given
+                    how many birds of each type are there.
                     As an example, we could have -
                   </p>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
@@ -183,19 +184,19 @@
                     </div>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="owlPix"></div>
-                      <p class="bold">b = numb. of Owls = 3</p>
+                      <p class="bold">b = numb. of hornbills = 3</p>
                     </div>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="parrotPix"></div>
-                      <p class="bold">c = numb. of Parrots = 5</p>
+                      <p class="bold">c = numb. of Owls = 5</p>
                     </div>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="pelicanPix"></div>
-                      <p class="bold">d = numb. of Pelicans = 2</p>
+                      <p class="bold">d = numb. of Parrots = 2</p>
                     </div>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="robinPix"></div>
-                      <p class="bold">e = numb. of Robins = 1</p>
+                      <p class="bold">e = numb. of Pelican = 1</p>
                     </div>
                   
                 </div>
@@ -204,14 +205,38 @@
                   <span class="procstepno bold">2.</span>
                   <p>You would be asked a question like this:</p>
                   <p class="bold">What is the Value of -</p>
-                  <p class="bold">a + 2b + 3c</p>
+                  <p class="bold">Number of Eagles + 2 x Number of Hornbills  + 3 x Number of Owls</p>
                   <p>
                    From the information given, you have to add the respective
                     figures like this -
                   </p>
-                  <p class="bold">4 + 2 x 3 + 3 x 5</p>
-                  <p class="bold">4 + 6 + 15 = 12</p>
-                  <p class="bold">= 25</p>
+                  <table class="bold exprtbl">
+                    <tr>
+                      <td></td>
+                      <td style="text-align: center;">4<br>(Eagles)</td>
+                      <td style="text-align: center;">+</td>
+                      <td style="text-align: center;">2 x 3 <br>(Hornbills)</td>
+                      <td style="text-align: center;">+</td>
+                      <td style="text-align: center;">3 x 5 <br> (Owls)</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:5px">=</td>
+                      <td style="text-align: center;">4</td>
+                      <td style="text-align: center;">+</td>
+                      <td style="text-align: center;">6</td>
+                      <td style="text-align: center;">+</td>
+                      <td style="text-align: center;">15</td>
+                    </tr>
+                    <tr>
+                      <td>=</td>
+                      <td style="text-align: center;">25</td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>
+                    </tr>
+                  </table>
+                  <p></p>
                 </div>
                 <hr />
                 <div class="procBox container">
@@ -306,9 +331,9 @@
                     possible in the given algebraic expression.
                   </p>
                   <p>A two-termed expression is -</p>
-                  <p class="bold">a + 2b</p>
+                  <p class="bold">Number of eagles +  3 x Number of hornbills</p>
                   <p>While a four-termed expression is</p>
-                  <p class="bold">a + 3b + 5c + d</p>
+                  <p class="bold">Number of eagles + 3 x number of hornbills + number of owls + 5 x number of parrots.</p>
                   <p>The maximum number of terms can vary between 2 and 5.</p>
                 </div>
               </div>
