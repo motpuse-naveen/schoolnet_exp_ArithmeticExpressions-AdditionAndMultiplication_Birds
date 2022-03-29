@@ -611,40 +611,45 @@ input[type="number"] {
   width: 150px;
 }
 .exprs_txt {
-  display: flex;
+  /*display: flex;
   text-align: center;
   flex-direction: row;
-  justify-content: left;
+  justify-content: left;*/
   font-family: "Montserrat-Bold";
+  /*
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 18px;
+  padding-left: 18px;*/
 }
 .exprs_txt div {
   padding-left: 6px;
   padding-right: 6px;
 }
 .vals_txt {
-  display: flex;
+  /*display: flex;
   text-align: center;
   flex-direction: row;
-  justify-content: left;
+  justify-content: left;*/
   font-family: "Montserrat-Bold";
+  /*
   padding-top: 5px;
   padding-bottom: 5px;
+  */
 }
 .vals_txt div {
   padding-left: 6px;
   padding-right: 6px;
 }
 .answer_txt {
+  /*
   display: flex;
   text-align: center;
   flex-direction: row;
-  justify-content: left;
+  justify-content: left;*/
   font-family: "Montserrat-Bold";
+  /*
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 5px;*/
 }
 .answer_txt div {
   padding-left: 6px;
@@ -835,9 +840,13 @@ input[type="number"] {
   flex-direction: row;
   justify-content: center;
 }
-.centertable{
-  display: inline-block;
+table.centertable{
+  /*display: inline-block;*/
     margin: auto;
+}
+table.centertable tr td{
+  padding: 5px;
+  text-align: center;
 }
 .Explain_mc_birdrow{
   /*display: flex;*/
