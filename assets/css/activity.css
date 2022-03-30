@@ -346,7 +346,7 @@
   width: 42%;
   /*height: 97px;*/
   position: relative;
-  padding: 30px 10px 10px 10px;
+  /*padding: 30px 10px 10px 10px;*/
   background-color: #fff;
   border-top: 2px solid #4b4b4b;
   border-right: 2px solid #4b4b4b;
@@ -603,6 +603,7 @@ input[type="number"] {
   bottom: 0px;
   width: 100%;
   /*position: absolute;*/
+  padding: 15px;
   padding-top: 40px;
 }
 .birdsExplain_txt {
@@ -845,8 +846,9 @@ table.centertable{
     margin: auto;
 }
 table.centertable tr td{
-  padding: 5px;
+  padding: 10px;
   text-align: center;
+  /*max-width: 150px;*/
 }
 .Explain_mc_birdrow{
   /*display: flex;*/

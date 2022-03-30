@@ -174,7 +174,8 @@ function newQuestion() {
     $("#set_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Set_mc").show();
     // $("#set_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Set_mc").css({left: screenMCXArray[k], top: screenMCYArray[k]});
     $("#set_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Set_mc").css({ left: Math.round($(screenTextArray[k]).position().left) - 20, top: Math.round($(screenTextArray[k]).position().top) + 8 });
-    $(screenTextArray[k]).text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "No. of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]);
+    //$(screenTextArray[k]).text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "No. of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]);
+    $(screenTextArray[k]).text("" + birdCountArray[birdOrderArray[k]] + " " + birdPluralArray[birdOrderArray[k]]);
   }
 
   shuffle(exprOrderArray);
@@ -412,12 +413,13 @@ $("#explain_btn").on("click", function () {
     $("#explain_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Explain_mc").show();
     // $("#explain_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Explain_mc").css({left: explainMCXArray[k], top: explainMCYArray[k]});   
     $("#explain_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Explain_mc").css({ left: Math.round($(explainTextArray[k]).position().left) + 30, top: Math.round($(explainTextArray[k]).position().top) });
-    $(explainTextArray[k]).text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "Number of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]);
+    //$(explainTextArray[k]).text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "Number of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]);
+    $(explainTextArray[k]).text("" + birdCountArray[birdOrderArray[k]] + " " + birdPluralArray[birdOrderArray[k]]);
 
     var col = $(".Explain_mc_birdrow").find(".bird" + (k + 1))
     col.empty();
     col.append($("#explain_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Explain_mc").clone().removeAttr("id").removeAttr("style"))
-    col.append($("<p class='bold birdtext'>").text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "Number of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]));
+    col.append($("<p class='bold birdtext'>").text("" + birdCountArray[birdOrderArray[k]] + " " + birdPluralArray[birdOrderArray[k]]));
   }
 
   for (var j = 0; j <= 4; j++) {
