@@ -186,7 +186,7 @@ var ActivityShell = (function () {
       var deviceType = ActivityShell.DeviceType();
       if (deviceType == "desktop") {
         if(!this.IsIOSDevice()){
-          $("button[data-toggle='tooltip']").tooltip({ boundary: 'window', container: $(".wrapper"), trigger: "hover",delay: { show: 500, hide: 100 } })
+          $("button[data-toggle='tooltip']").tooltip({ boundary: 'viewport', container: $(".wrapper"), trigger: "hover",delay: { show: 500, hide: 100 } })
         }
       }
     }
