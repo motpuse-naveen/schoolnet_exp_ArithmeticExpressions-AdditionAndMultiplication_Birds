@@ -164,7 +164,7 @@ function resetExperiment() {
   totalQtns = 0;
   correctQtns = 0;
   $(".score_txt").text("" + correctQtns + "/" + totalQtns);
-  $("#next_btn").hide();
+  //$("#next_btn").hide();
   newQuestion();
 }
 
@@ -223,8 +223,8 @@ function newQuestion() {
   mStr = mStr.substring(0, mStr.length - 3);
   $(".correctAnswer_txt").hide();
   $(".correctAnswer_txt").html("");
-  $("#next_btn").hide();
-  $("#explain_btn").hide();
+  //$("#next_btn").hide();
+  //$("#explain_btn").hide();
   $(".qtn_txt").text(mStr);
 }
 function fillExprCoeffArray() {
@@ -253,6 +253,8 @@ function initSet(my_mc, myLibStr) {
 $("#btn_reset").on("click", function () {
   ScreenSplitter.ResetSplit();
   resetExperiment();
+  $("#next_btn").hide();
+  $("#explain_btn").hide();
 });
 
 $("#OK_btn").on("click", function () {
@@ -279,6 +281,8 @@ $("#OK_btn").on("click", function () {
 $("#next_btn").on("click", function () {
   curQtnNo++;
   newQuestion();
+  $("#next_btn").hide();
+  $("#explain_btn").hide();
 });
 
 $("#explain_btn").on("click", function () {

@@ -939,3 +939,18 @@ input[type="number"] {
 .popup_mc{
   touch-action: pan-x pan-y;
 }
+
+@media only screen and (max-width: 490px) {
+  .button_style{
+      padding: 0.375rem 0.4rem;
+      min-width: 50px;
+  }
+  .container-so.main .exp_footer .footer{
+      padding-left: 46px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .button_style{
+    width: auto;
+  } 
+}

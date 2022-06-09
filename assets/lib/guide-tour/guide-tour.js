@@ -114,6 +114,8 @@ var GuidedTour = (function () {
             $(".gt-instr-box").remove();
             $(".gt-clone").remove();
             $("#btn_skip_gt").remove();
+            $("#next_btn").hide();
+            $("#explain_btn").hide();
         },
         PrevTip: function () {
             GuidedTour.CheckPrevStep();

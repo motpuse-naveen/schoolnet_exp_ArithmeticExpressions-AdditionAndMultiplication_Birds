@@ -660,3 +660,20 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
 .zoom2{
   background-color: #fff;
 }
+
+.button_style {
+  color: var(--theme-pri-text-color);
+  background-color: var(--theme-pri-color);
+  border: 1px solid var(--theme-btn-border);
+  text-align: center;
+  margin: 8px 5px;
+  min-width: 60px;
+  line-height: 1.2;
+}
+.button_style:hover {
+  color: var(--theme-pri-text-color);
+}
+.button_style.gt-clone{
+  margin-top: 0px;
+  margin-left: 0px;
+}
