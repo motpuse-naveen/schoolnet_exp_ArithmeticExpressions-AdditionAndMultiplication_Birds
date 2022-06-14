@@ -148,31 +148,33 @@
                           </div>
                         </div>
                       </div>
-
-                      <div class="score_cont">
-                        <div class="score_title">Score</div>
-                        <div class="score_txt">0/0</div>
-                      </div>
-
-                      <div class="ques_cont">
-                        <div class="wrong_mc">&#10006;</div>
-                        <div class="correct_mc">&#10004;</div>
-                        <div class="row" style="margin: 0px;">
-                          <div class="ques_content col-8">
-                            <div class="qNo_txt">Q1: What is the value of:</div>
-                            <div class="qtn_txt bold">QUESTION</div>
+                      <div class="expr_cont row">
+                        <div class="col">
+                          <div class="score_cont">
+                            <div class="score_title">Score</div>
+                            <div class="score_txt">0/0</div>
                           </div>
-                          <div class="ans_content col-4">
-                            <div class="row" style="height: 100%;">
-                              <div class="col my-auto">
-                                <label htmlFor="numbInput_txt" class="numbInput_label bold">=</label>
-                                <input id="numbInput_txt" type="number" placeholder="0" class="bold" />
+                          <div class="ques_cont">
+                            <div class="wrong_mc">&#10006;</div>
+                            <div class="correct_mc">&#10004;</div>
+                            <div class="row" style="margin: 0px;">
+                              <div class="ques_content col-8">
+                                <div class="qNo_txt">Q1: What is the value of:</div>
+                                <div class="qtn_txt bold">QUESTION</div>
+                              </div>
+                              <div class="ans_content col-4">
+                                <div class="row" style="height: 100%;">
+                                  <div class="col my-auto">
+                                    <label htmlFor="numbInput_txt" class="numbInput_label bold">=</label>
+                                    <input id="numbInput_txt" type="number" placeholder="0" class="bold" />
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
+                          <div class="correctAnswer_txt bold">0/0</div>
                         </div>
                       </div>
-                      <div class="correctAnswer_txt bold">0/0</div>
                     </div>
                   </div>
                 </div>
@@ -202,10 +204,11 @@
                 <div class="procBox container">
                   <span class="procstepno bold">1.</span>
                   <p>
-                    This exploriment deals with evaluation of expressions with addition and simple multiplication. We have
-                  a set of five different birds. We are also given
-                  how many birds of each type are there.
-                  As an example, we could have -
+                    This exploriment deals with evaluation of expressions with addition and simple multiplication. We
+                    have
+                    a set of five different birds. We are also given
+                    how many birds of each type are there.
+                    As an example, we could have -
                   </p>
                   <div style="float: left; align-items: center; display: flex; flex-direction: row;">
                     <div class="eaglePix"></div>
@@ -328,8 +331,8 @@
                   <span class="procstepno bold">6.</span>
                   <p>
                     At the top left, is the configuration manager. You can use
-                  it to decide on the number of digits and the number of
-                  terms.
+                    it to decide on the number of digits and the number of
+                    terms.
                   </p>
                   <div class="config_cont">
                     <div style="margin-right: 1rem;">
@@ -349,8 +352,8 @@
                   </div>
                   <p>
                     The number of digits denotes the size of the numbers to
-                  add. If the number of digits is "1", then all bird counts
-                  are 1 digit numbers.
+                    add. If the number of digits is "1", then all bird counts
+                    are 1 digit numbers.
                   </p>
                   <p>
                     If the number of digits is 5, you would have 12345 owls
@@ -366,10 +369,11 @@
                     possible in the given algebraic expression.
                   </p>
                   <p>A two termed expression is -</p>
-                <p class="bold">Number of eagles + 3 x Number of hornbills</p>
-                <p>While a four termed expression is</p>
-                <p class="bold">Number of eagles + 3 x number of hornbills + number of owls + 5 x number of parrots.</p>
-                <p>The maximum number of terms can vary between 2 and 5.</p>
+                  <p class="bold">Number of eagles + 3 x Number of hornbills</p>
+                  <p>While a four termed expression is</p>
+                  <p class="bold">Number of eagles + 3 x number of hornbills + number of owls + 5 x number of parrots.
+                  </p>
+                  <p>The maximum number of terms can vary between 2 and 5.</p>
                 </div>
               </div>
             </div>
@@ -446,45 +450,44 @@
               </div>
               <div class="birdsAnswer_container">
                 <table class="centertable">
-                  <tr>
-                    <td>
-                      <div class="exprs_txt">
-                        <div id="expr1_txt">A</div>
-                        <div id="exprPlus1_mc">+</div>
-                        <div id="expr2_txt">A</div>
-                        <div id="exprPlus2_mc">+</div>
-                        <div id="expr3_txt">A</div>
-                        <div id="exprPlus3_mc">+</div>
-                        <div id="expr4_txt">A</div>
-                        <div id="exprPlus4_mc">+</div>
-                        <div id="expr5_txt">A</div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="vals_txt">
-                        <div>=</div>
-                        <div id="val1_txt">19325</div>
-                        <div id="valPlus1_mc">+</div>
-                        <div id="val2_txt">19325</div>
-                        <div id="valPlus2_mc">+</div>
-                        <div id="val3_txt">19325</div>
-                        <div id="valPlus3_mc">+</div>
-                        <div id="val4_txt">19325</div>
-                        <div id="valPlus4_mc">+</div>
-                        <div id="val5_txt">19325</div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="answer_txt">
-                        <div>=</div>
-                        <div id="answer_txt" class="answer_val">19325</div>
-                      </div>
-                    </td>
-                  </tr>
+                  <tbody>
+                    <tr class="exprs_txt">
+                      <td></td>
+                      <td id="expr1_txt">A</td>
+                      <td id="exprPlus1_mc">+</td>
+                      <td id="expr2_txt">A</td>
+                      <td id="exprPlus2_mc">+</td>
+                      <td id="expr3_txt">A</td>
+                      <td id="exprPlus3_mc">+</td>
+                      <td id="expr4_txt">A</td>
+                      <td id="exprPlus4_mc">+</td>
+                      <td id="expr5_txt">A</td>
+                    </tr>
+                    <tr class="vals_txt">
+                      <td>=</td>
+                      <td id="val1_txt">19325</td>
+                      <td id="valPlus1_mc">+</td>
+                      <td id="val2_txt">19325</td>
+                      <td id="valPlus2_mc">+</td>
+                      <td id="val3_txt">19325</td>
+                      <td id="valPlus3_mc">+</td>
+                      <td id="val4_txt">19325</td>
+                      <td id="valPlus4_mc">+</td>
+                      <td id="val5_txt">19325</td>
+                    </tr>
+                    <tr class="answer_txt">
+                      <td>=</td>
+                      <td id="answer_txt" class="answer_val">19325</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>

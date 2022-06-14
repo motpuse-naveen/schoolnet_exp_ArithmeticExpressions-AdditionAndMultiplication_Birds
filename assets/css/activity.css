@@ -640,7 +640,7 @@ input[type="number"] {
   margin-top: 120px;
   width: 150px;
 }
-
+/*
 .exprs_txt {
   display: flex;
   text-align: center;
@@ -686,6 +686,15 @@ input[type="number"] {
 .answer_txt div {
   padding-left: 6px;
   padding-right: 6px;
+}
+*/
+table.centertable{
+  margin: auto;
+  font-family: "Montserrat-Bold";
+}
+table.centertable tr td {
+  padding: 5px;
+  text-align: center;
 }
 
 .btn_close {
@@ -938,6 +947,15 @@ input[type="number"] {
 }
 .popup_mc{
   touch-action: pan-x pan-y;
+}
+@media only screen and (max-width: 650px) {
+  .container-so.main .exp_header .header h1 .title {
+    font-size: 13px !important;
+  }
+
+  .container-so.main .exp_header .header h1 .sub-title {
+    font-size: 13px !important;
+  }
 }
 
 @media only screen and (max-width: 490px) {

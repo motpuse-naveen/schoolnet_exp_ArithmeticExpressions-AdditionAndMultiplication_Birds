@@ -36,23 +36,26 @@ var ActivityShell = (function () {
     },
     LaunchActivity: function () {
       $(".wrapper").addClass("activity");
+      $(".container-so.launch").hide();
+      $(".container-so.main").show();
       var deviceType = ActivityShell.DeviceType();
       var Android = /(android)/i.test(navigator.userAgent);
+
       if (deviceType == "mobile" && Android) {
         openFullscreen()
         generatePreloader();
         setTimeout(function () {
           $(".preloader").remove();
-          $(".container-so.launch").fadeOut();
-          $(".container-so.main").show();
           ActivityShell.AdjustContainerHeight();
           ScreenSplitter.InitSplitter();
-          GuidedTour.Init();
+          //GuidedTour.Init();
           EvaluateAlgebraicExpressions.LaunchActivity();
           /* Scale Spring to fit */
+          setTimeout(function () {
           ScreenSplitter.ScaleToFit($("#split-0"));
           /* Scale Graph to fit */
           ScreenSplitter.ScaleToFit($("#split-1"));
+          },500);
 
           if (zoom1 == null) {
             hammerItScrollableContent(document.querySelector(".zoom1"));
@@ -62,19 +65,27 @@ var ActivityShell = (function () {
             hammerItScrollableContent(document.querySelector(".zoom2"));
             zoom2 = "zoom2";
           }
+          setTimeout(function () {
+            GuidedTour.Init();
+          }, 500);
         }, 1000)
       }
       else {
-        $(".container-so.launch").fadeOut();
-        $(".container-so.main").show();
         this.AdjustContainerHeight();
-        ScreenSplitter.InitSplitter();
-        GuidedTour.Init();
+        if(window.screen.width<1024){
+          ScreenSplitter.InitSplitter();
+        }
+        else{
+          ScreenSplitter.InitSplitter(null, true);
+        }
+        //GuidedTour.Init();
         EvaluateAlgebraicExpressions.LaunchActivity();
         /* Scale Spring to fit */
-        ScreenSplitter.ScaleToFit($("#split-0"));
-        /* Scale Graph to fit */
-        ScreenSplitter.ScaleToFit($("#split-1"));
+        setTimeout(function () {
+          ScreenSplitter.ScaleToFit($("#split-0"));
+          /* Scale Graph to fit */
+          ScreenSplitter.ScaleToFit($("#split-1"));
+          },500);
 
         if (zoom1 == null) {
           hammerItScrollableContent(document.querySelector(".zoom1"));
@@ -84,6 +95,9 @@ var ActivityShell = (function () {
           hammerItScrollableContent(document.querySelector(".zoom2"));
           zoom2 = "zoom2";
         }
+        setTimeout(function () {
+          GuidedTour.Init();
+        }, 500);
       }
     },
     AdjustContainerHeight: function () {
@@ -120,7 +134,12 @@ var ActivityShell = (function () {
       var bodyHt = $("body").height()
       bodyHt = Number(bodyHt)
       if (bodyHt < 440) {
-        $(".wrapper").addClass("small-height-landscape")
+        if (bodyHt < 290) {
+          $(".wrapper").addClass("extra-small-height-landscape")
+        }
+        else {
+          $(".wrapper").addClass("small-height-landscape")
+        }
       }
     },
     DeviceType: function () {
@@ -137,6 +156,13 @@ var ActivityShell = (function () {
       }
       else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
         return "mobile";
+      }
+      else{
+        if (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2) {
+          if (window.screen.availWidth < 1024 || window.screen.availHeight < 1024) {
+            return "tablet"
+          }
+        }
       }
       return "desktop";
     },
@@ -233,7 +259,7 @@ var ActivityShell = (function () {
       var deviceType = this.DeviceType();
       if (deviceType == "desktop") {
         this.AdjustContainerHeight();
-        ScreenSplitter.InitSplitter(null,true);
+        ScreenSplitter.InitSplitter(null, true);
         if ($(".popup").is(":visible")) {
           this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"));
         }
