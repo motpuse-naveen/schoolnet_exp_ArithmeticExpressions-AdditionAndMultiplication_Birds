@@ -410,6 +410,10 @@
   /*BOB Style*/
 
   /*END BOB Style*/
+  .wrapper[device="tablet"] .container-so.main .exp_header .header .leftpan{
+    min-width: 340px;
+  }
+  
   .wrapper[device="tablet"] .container-so.main .exp_header .header .head-pan-container {
     font-size: 15px;
   }

@@ -52,26 +52,26 @@
 
 .eaglePix_sym {
   width: 65px;
-  height: 85px;
+  height: 75px;
   background-image: url(../images/birds/eagle.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -15px;
   left: 0px;
 }
 
 .hornbillPix_sym {
   width: 70px;
-  height: 100px;
+  height: 90px;
   background-image: url(../images/birds/hornbill.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -20px;
 }
 
 .woodpeckerPix_sym {
   width: 50px;
-  height: 90px;
+  height: 85px;
   background-image: url(../images/birds/woodpecker.svg);
   background-repeat: no-repeat;
   position: absolute;
@@ -81,11 +81,11 @@
 
 .swanPix_sym {
   width: 75px;
-  height: 85px;
+  height: 75px;
   background-image: url(../images/birds/swan.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -15px;
   left: 5px;
 }
 
@@ -132,11 +132,11 @@
 
 .parrotPix_sym {
   width: 60px;
-  height: 100px;
+  height: 86px;
   background-image: url(../images/birds/parrot.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -20px;
+  top: -16px;
   left: -1px;
 }
 
