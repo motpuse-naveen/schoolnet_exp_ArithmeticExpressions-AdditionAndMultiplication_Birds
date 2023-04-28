@@ -67,12 +67,12 @@ var ActivityShell = (function () {
           }
           setTimeout(function () {
             GuidedTour.Init();
-          }, 500);
+          }, 0);
         }, 1000)
       }
       else {
         this.AdjustContainerHeight();
-        if(window.screen.width<1024){
+        if(window.screen.width<1367){
           ScreenSplitter.InitSplitter();
         }
         else{
@@ -97,7 +97,7 @@ var ActivityShell = (function () {
         }
         setTimeout(function () {
           GuidedTour.Init();
-        }, 500);
+        }, 0);
       }
     },
     AdjustContainerHeight: function () {

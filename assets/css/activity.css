@@ -384,6 +384,10 @@
   max-width: 100%;
 }
 
+#numbInput_txt:focus::placeholder {
+  color: transparent;
+}
+
 .wrong_mc {
   position: absolute;
   top: -45px;
@@ -484,7 +488,7 @@ input[type="number"] {
   background-color: var(--theme-pri-color);
   border: 1px solid var(--theme-btn-border);
   text-align: center;
-  margin: 7px;
+  margin-left: -79px;
   width: 85px;
   line-height: 1.2;
 }

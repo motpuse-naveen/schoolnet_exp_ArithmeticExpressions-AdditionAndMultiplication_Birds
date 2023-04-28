@@ -23,7 +23,7 @@ var ScreenSplitter = (function () {
     </g>
 </svg>
     </div>`;
-
+    var g_SplitContentSize = [];
     return {
         InitSplitter: function (p_sizes, whenresize) {
             $("#split-main").removeClass("v-split-main").removeClass("h-split-main");
@@ -58,11 +58,12 @@ var ScreenSplitter = (function () {
             if(p_sizes!=null && p_sizes!=undefined && p_sizes.length>1){
                 loc_sizes = p_sizes;
             }
+            var minsizes = this.GetMinSizeLimits_Horz();
             $(".gutter").remove();
             $("#split-0").removeAttr("style");
             $("#split-1").removeAttr("style");
             split_instance = Split(['#split-0', '#split-1'], {
-                minSize: 200,
+                minSize: minsizes,
                 sizes: loc_sizes,
                 gutterSize: 1,
                 onDrag: function (sizes) {
@@ -84,10 +85,12 @@ var ScreenSplitter = (function () {
             if(p_sizes!=null && p_sizes!=undefined && p_sizes.length>1){
                 loc_sizes = p_sizes;
             }
+            var minsizes = this.GetMinSizeLimits();
             $(".gutter").remove();
             $("#split-0").removeAttr("style");
             $("#split-1").removeAttr("style");
             split_instance = Split(['#split-0', '#split-1'], {
+                minSize: minsizes,
                 sizes: loc_sizes,
                 direction: 'vertical',
                 gutterSize: 1,
@@ -103,6 +106,97 @@ var ScreenSplitter = (function () {
                 }
             })
             $(".gutter").append(verticalHandle)
+        },
+        GetMinSizeLimits: function(){
+            var minsizes = [200, 200]
+            //debugger
+            g_SplitContentSize = [
+                $(".content-container.mc").height(),
+                $(".content-container.instr").height()
+            ]
+            if (g_SplitContentSize.length == 2) {
+                
+                var totalHt = $("#split-main").height();
+                //var partOfTotal0 = Math.trunc(totalHt / g_SplitContentSize[0]);
+                var partOfTotal0 = totalHt / g_SplitContentSize[0];
+                if (partOfTotal0 >= 4) {
+                    partOfTotal0 = 3.5
+                }
+                else if(partOfTotal0 >= 3 ){
+                    partOfTotal0 = 3.5;
+                }
+                else if(partOfTotal0>=2){
+                    partOfTotal0 = 3.5;
+                }
+                else{
+                    partOfTotal0 = 2.5;
+                }
+                //var partOfTotal1 = Math.trunc(totalHt / g_SplitContentSize[1]);
+                var partOfTotal1 = totalHt / g_SplitContentSize[1];
+                if (partOfTotal1 >= 4) {
+                    partOfTotal1 = 3.5
+                }
+                else if(partOfTotal1 >= 3){
+                    partOfTotal1 = 3.2;
+                }
+                else if(partOfTotal1>=2){
+                    partOfTotal1 = 3;
+                }
+                else{
+                    partOfTotal1 = 2.5;
+                }
+                minsizes = [
+                    g_SplitContentSize[0] / 4 * partOfTotal0,
+                    g_SplitContentSize[1] / 4 * partOfTotal1,
+                ]
+            }
+            return minsizes;
+        },
+        GetMinSizeLimits_Horz: function(){
+            var minsizes = [200, 300]
+            //debugger
+            g_SplitContentSize = [
+                $(".content-container.mc").width(),
+                $(".content-container.instr").width()
+            ]
+            if (g_SplitContentSize.length == 2) {
+                
+                var totalWdt = $("#split-main").width();
+                //var partOfTotal0 = Math.trunc(totalHt / g_SplitContentSize[0]);
+                var partOfTotal0 = totalWdt / g_SplitContentSize[0];
+                if (partOfTotal0 >= 4) {
+                    partOfTotal0 = 3.5
+                }
+                else if(partOfTotal0 >= 3 ){
+                    partOfTotal0 = 3.5;
+                }
+                else if(partOfTotal0>=2){
+                    partOfTotal0 = 3.5;
+                }
+                else{
+                    partOfTotal0 = 2.5;
+                }
+                //var partOfTotal1 = Math.trunc(totalHt / g_SplitContentSize[1]);
+                var partOfTotal1 = totalWdt / g_SplitContentSize[1];
+                if (partOfTotal1 >= 4) {
+                    partOfTotal1 = 3.5
+                }
+                else if(partOfTotal1 >= 3){
+                    partOfTotal1 = 3.2;
+                }
+                else if(partOfTotal1>=2){
+                    partOfTotal1 = 3;
+                }
+                else{
+                    partOfTotal1 = 2.5;
+                }
+                minsizes = [
+                    g_SplitContentSize[0] / 4 * partOfTotal0,
+                    g_SplitContentSize[1] / 4 * partOfTotal1,
+                ]
+            }
+
+            return minsizes;
         },
         ScaleToFit: function ($wrapper,$element, deltaWidth, deltaHeight, splittype) {
             if($element==null || $element == undefined){

@@ -36,9 +36,9 @@
 /**/
 
 .wrapper[device="desktop"] #split-0, .wrapper[device="desktop"] #split-1 {
-  height: 100% !important;
+  /*height: 100% !important;
   max-height: 100%;
-  float: left;
+  float: left;*/
   overflow: auto;
 }
 
@@ -160,10 +160,10 @@
 
   #split-0,
   #split-1 {
-    min-height: 100px;
+    /*min-height: 100px;
     height: 100% !important;
     max-height: 100%;
-    float: left;
+    float: left;*/
     overflow: auto;
   }
 
@@ -175,6 +175,15 @@
 @media screen and (orientation: landscape) and (min-device-width: 380px)and (max-device-width: 990px) and (max-device-height: 990px) {
   .titledesktop {
     display: none !important;
+  }
+
+  #split-0,
+  #split-1 {
+    min-height: 100px;
+    height: 100% !important;
+    max-height: 100%;
+    float: left;
+    overflow: auto;
   }
 
   .titlemobile {
@@ -201,9 +210,9 @@
   }*/
   #split-0,
   #split-1 {
-    height: 100% !important;
+    /*height: 100% !important;
     max-height: 100%;
-    float: left;
+    float: left;*/
     overflow: auto;
   }
 
@@ -310,7 +319,7 @@
 
   .birds_set_mc_txt {
     width: 270px !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     padding: 13px 10px 5px 50px !important;
   }
 
@@ -324,7 +333,7 @@
   /* .exp_body_content{
         height: 100% !important;
     } */
-  .container-so.main .exp_header {
+    .wrapper[device="mobile"] .container-so.main .exp_header {
     display: none;
   }
 
@@ -332,8 +341,8 @@
     justify-content: right !important;
   }
 
-  .container-so.main .exp_body_footer,
-  .container-so.main .exp_body_header {
+  /*.container-so.main .exp_body_footer,*/
+  .wrapper[device="mobile"] .container-so.main .exp_body_header {
     display: none;
   }
 
@@ -435,6 +444,13 @@
   .activity-page-expl-logo {
     padding: 13px 10px 13px 16px;
   }
+
+  .btn_reset{
+    margin-left: -75px;
+  }
+  .btn_reset.gt-clone{
+    margin-left: 0px;
+  }
 }
 
 @media screen and (orientation: landscape) and (max-device-height: 610px) {
@@ -453,6 +469,10 @@
 
 @media screen and (orientation: landscape) {
   #split-0, #split-1 {
+    min-height: 100px;
+    height: 100% !important;
+    max-height: 100%;
     float: left;
+    overflow: auto;
   }
 }

@@ -159,10 +159,10 @@ function maxTerms_cmb_Listener(id) {
 }
 
 function resetExperiment() {
-  //mStr = "";
-  //curQtnNo = 1;
-  //totalQtns = 0;
-  //correctQtns = 0;
+  mStr = "";
+  curQtnNo = 1;
+  totalQtns = 0;
+  correctQtns = 0;
   //$(".score_txt").text("" + correctQtns + "/" + totalQtns);
   //$("#next_btn").hide();
   newQuestion();
